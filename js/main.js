@@ -13,6 +13,7 @@ var app = new Vue({
       var todo = {
         item: jsObj[i].item,
         isCheck: jsObj[i].isCheck,
+        isEditMode: false,
       };
       this.todos.push(todo);
     }
@@ -28,6 +29,7 @@ var app = new Vue({
       var todo = {
         item: this.inputAdd,
         isCheck: false,
+        isEditMode: false,
       };
       this.todos.push(todo);
       this.inputLocalStrage();
@@ -36,6 +38,24 @@ var app = new Vue({
     //データを削除
     deleteItem(index) {
       this.todos.splice(index, 1);
+      this.inputLocalStrage();
+    },
+    //データを編集
+    editItem(index, state) {
+      if (this.todos[index].isEditMode) {
+        this.todos[index].isEditMode = false;
+        if (state == "cancel") {
+          //編集cancel時
+          this.inputLocalStrage();
+          return true;
+        }
+        let afterText = document.getElementById("editTextArea" + index).value;
+        if (afterText) {
+          this.todos[index].item = afterText;
+        }
+      } else {
+        this.todos[index].isEditMode = true;
+      }
       this.inputLocalStrage();
     },
     //チェック状態の管理
