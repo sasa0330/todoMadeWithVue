@@ -8,6 +8,7 @@
     display: block;
     width: 90%;
     height: 100%;
+    font-size: 17px;
     margin: 0 auto;
   }
 }
@@ -23,7 +24,7 @@
   }
 }
 
-.reset-btn, .input-todo-area .input-btn, .stock-todo-area .todo-list_contents .todo-list_btn .btn-left .btn, .stock-todo-area .todo-list_contents .todo-list_btn .btn-right .btn {
+.reset-btn-style, .input-todo-area .input-btn, .stock-todo-area .todo-list_contents .todo-list_btn .btn-left .btn, .stock-todo-area .todo-list_contents .todo-list_btn .btn-right .btn {
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -32,6 +33,10 @@
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+}
+
+.base-input-text, .input-todo-area .input-todo, .stock-todo-area .todo-list_contents .todo-list_text .input-todo-edit {
+  font-size: 17px;
 }
 
 .main-title {
