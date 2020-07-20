@@ -159,6 +159,8 @@
   background-color: #fff;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  -webkit-box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.5);
 }
 
 .modal .modal-content {
@@ -166,8 +168,18 @@
   margin: 0 auto;
 }
 
-.modal .to-github {
+.modal .modal-content .img-sauce {
+  display: block;
+  width: 90px;
   margin: 0 auto;
+}
+
+.modal .to-github {
+  position: absolute;
+  bottom: 70px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   width: 90%;
   height: 40px;
   text-align: center;
@@ -176,8 +188,16 @@
   border: solid 1px #000;
 }
 
+.modal .to-github .to-github-link {
+  display: block;
+}
+
 .modal .modal-close {
-  margin: 0 auto;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   width: 90%;
   height: 40px;
   text-align: center;
