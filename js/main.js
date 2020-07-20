@@ -74,7 +74,7 @@ var app = new Vue({
     },
     //オプション機能：ソースコード公開モーダル
     optionHowTo(inputAdd) {
-      if (inputAdd === "HowToMake" || inputAdd === "はうつーめいく") {
+      if (inputAdd === "そーす") {
         this.isShowModal = true;
       }
     },

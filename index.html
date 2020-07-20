@@ -53,10 +53,10 @@
               </div>
               <div class="todo-list_btn">
                 <div class="btn-left">
-                  <button @click="deleteItem(index);" class="btn" v-if="!todo.isEditMode">
+                  <button @click="deleteItem(index);" class="btn delete" v-if="!todo.isEditMode">
                     <i class="fas fa-trash-alt"></i>
                   </button>
-                  <button @click="editItem(index, 'cancel');" v-if="todo.isEditMode" class="btn">
+                  <button @click="editItem(index, 'cancel');" v-if="todo.isEditMode" class="btn cancel">
                     <i class="fas fa-window-close"></i>
                   </button>
                 </div>
@@ -73,12 +73,14 @@
           </div>
 
           <div v-if="isShowModal" class="modal">
-            <a
-              href="https://github.com/sasa0330/todoListMadeWithVue"
-              target="_brank"
-              >そーすこーど</a
-            >
-            <p @click="isShowModal = !isShowModal">close</p>
+            <div class="modal-content">
+
+
+            </div>
+            <div class="to-github">
+              <a href="https://github.com/sasa0330/todoListMadeWithVue" target="_brank">ぎっと</a>
+            </div>
+            <div class="modal-close" @click="isShowModal = !isShowModal">close</div>
           </div>
         </div>
       </section>
